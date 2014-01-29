@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
-// Copyright (c) 2013 CHNCoin Developers
+// Copyright (c) 2013 MacroCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -295,14 +295,14 @@ void ThreadIRCSeed2(void* parg)
         }
         
         if (fTestNet) {
-            Send(hSocket, "JOIN #chncoinTEST\r");
-            Send(hSocket, "WHO #chncoinTEST\r");
+            Send(hSocket, "JOIN #macrocoinTEST\r");
+            Send(hSocket, "WHO #macrocoinTEST\r");
         } else {
-            // randomly join #chncoin00-#chncoin99
+            // randomly join #macrocoin00-#macrocoin99
             int channel_number = GetRandInt(100);
-            channel_number = 0; // CHNCoin: for now, just use one channel
-            Send(hSocket, strprintf("JOIN #chncoin%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #chncoin%02d\r", channel_number).c_str());
+            channel_number = 0; // MacroCoin: for now, just use one channel
+            Send(hSocket, strprintf("JOIN #macrocoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #macrocoin%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();

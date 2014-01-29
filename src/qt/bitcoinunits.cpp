@@ -34,9 +34,9 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("CNC");
-    case mBTC: return QString("mCNC");
-    case uBTC: return QString::fromUtf8("μCNC");
+    case BTC: return QString("MCR");
+    case mBTC: return QString("mMCR");
+    case uBTC: return QString::fromUtf8("μMCR");
     default: return QString("???");
     }
 }
@@ -45,9 +45,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("CNCoins");
-    case mBTC: return QString("Milli-CNCoins (1 / 1,000)");
-    case uBTC: return QString("Micro-CNCoins (1 / 1,000,000)");
+    case BTC: return QString("MacroCoins");
+    case mBTC: return QString("Milli-MacroCoins (1 / 1,000)");
+    case uBTC: return QString("Micro-MacroCoins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
